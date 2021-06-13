@@ -1,13 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
- <div id="main">
+ <div class='text-center'>
      {{-- サービス概要 --}}
      <h3></h3>
      <p>
          
      </p>
-     <a href="#" class="btn btn-primary">ログイン</a>
+     {!! link_to_route('signup.get', '会員登録', [], ['class' => 'btn btn-lg btn-primary']) !!}
+        </div>
  </div>
 
 @endsection

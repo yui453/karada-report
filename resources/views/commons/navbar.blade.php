@@ -9,8 +9,22 @@
         <div class="collapse navbar-collapse" id="nav-bar">
             <ul class="navbar-nav mr-auto"></ul>
             <ul class="navbar-nav">
-                {{-- ログインページへのリンク --}}
-                <li class="nav-item"><a href="#" class="nav-link">ログイン</a></li>
+                @if(auth()->check() && auth()->user()->is_admin == '1')
+                    {{-- 会員登録ページへのリンク --}}
+                    <li class="nav-item">{!! link_to_route('signup.get', '会員登録', [], ['class'=>'nav-link']) !!}</li>
+                    {{-- ログアウトリンク --}}
+                    <li class="nav-item"><a href="#" class="nav-link">ログアウト</a></li>
+                    
+                @elseif(auth()->check())
+                    {{-- ログアウトリンク --}}
+                    <li class="nav-item"><a href="#" class="nav-link">ログアウト</a></li>
+                
+                @else
+                    {{-- ログインページへのリンク --}}
+                    <li class="nav-item"><a href="#" class="nav-link">ログイン</a></li>
+                
+                @endif
+                    
             </ul>
         </div>
     </nav>
