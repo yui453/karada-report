@@ -7,8 +7,11 @@
      <p>
          
      </p>
-     {!! link_to_route('signup.get', '会員登録', [], ['class' => 'btn btn-lg btn-primary']) !!}
-        </div>
+     @if(Auth::check() && Auth::user()->is_admin == '1')
+        {{-- 会員登録リンク --}}
+        {!! link_to_route('signup.get', '会員登録', [], ['class' => 'btn btn-lg btn-primary']) !!}
+     @endif
+     
  </div>
 
 @endsection
