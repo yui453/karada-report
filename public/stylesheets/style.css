@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
+
+header {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.container {
+    width: 1000px;
+}
+
+body {
+    color: #3a3a3a;
+}
+
+h3{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-left: 10px solid #caa846;
+    padding-left: 10px;
+}
+
+.btn{
+    color: #caa846;
+    background-color: #fff;
+    border: 2px solid #caa846;
+}
+
+.btn:hover{
+    color: #fff;
+    background-color: #caa846;
+}
+
+/*welcomeページ*/
+#main_visual{
+    height: 480px;
+    background-image: url(/images/top.jpg);
+    position: relative;
+}
+
+.main_visual_title {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    margin-top: 80px;
+    margin-left: 100px;
+    padding: 30px 80px;
+}
+
+#main_visual h1{
+    font-size: 70px;
+}
+
+.lead {
+    font-size: 20px;
+}
+
+/*navbarページ*/
+.navbar{
+    height: 80px;
+    border-top: 8px solid #caa846;
+    border-bottom: 2px solid #797979;
+}
+
+.navbar-brand{
+    
+    font-size: 30px;
+    font-weight: 600;
+    color: #5c5c5c;
+}
+
+.navbar-brand:hover{
+    color: #5c5c5c;
+    
+}
+
+.nav-link{
+    color: #3a3a3a;
+    font-weight: 400;
+}
+
+.nav-link:hover{
+    color: #3a3a3a;
+    border-bottom: 2px solid #caa846
+}
+
+/*users.indexページ*/
+.table th{
+    background-color: #e6e6e6;
+}
+
+.index-link{
+    color: #caa846;
+    background-color: #fff;
+    border: 2px solid #caa846;
+}
+
+.index-link:hover{
+    color: #fff;
+    background-color: #caa846;
+}
+
+/*users.showページ*/
+.card{
+    background-color: #e6e6e6;
+}
+
+.report-list-item{
+    /*display: block;
+    height: 100%;
+    width: 100%;*/
+    line-height: 50px;
+    color:#3a3a3a;
+}
+
+.report-list-item:hover{
+    color: #3a3a3a;
+    /*background-color: #e6e6e6;*/
+}

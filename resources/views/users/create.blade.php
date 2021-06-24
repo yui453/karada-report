@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-sm-6 offset-sm-3">
 
-            {!! Form::open(['route' => 'signup.post']) !!}
+            {!! Form::model($user,['route' => 'users.store']) !!}
                 <div class="form-group">
                     {!! Form::label('number', 'No.') !!}
                     {!! Form::text('number', null, ['class' => 'form-control']) !!}
@@ -34,7 +34,7 @@
                     {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
                 </div>
 
-                {!! Form::submit('登録', ['class' => 'btn btn-primary btn-block']) !!}
+                {!! Form::submit('登録', ['class' => 'btn btn-block']) !!}
             {!! Form::close() !!}
         </div>
     </div>

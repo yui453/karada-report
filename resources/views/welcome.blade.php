@@ -1,17 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
- <div class='text-center'>
-     {{-- サービス概要 --}}
-     <h3></h3>
-     <p>
-         
-     </p>
-     @if(Auth::check() && Auth::user()->is_admin == '1')
-        {{-- 会員登録リンク --}}
-        {!! link_to_route('signup.get', '会員登録', [], ['class' => 'btn btn-lg btn-primary']) !!}
-     @endif
-     
- </div>
 
+        <div id="main_visual">
+                <div class="main_visual_title text-center">
+                        <p>治療院と患者さんがつながる！</p>
+                        <h1><i class="far fa-clipboard fa-lg mr-2 ml-4""></i>からだレポート</h1>
+                        <p class="lead">からだの分析結果や治療方針を知っていただき、<br>安心して施術を受けていただくための情報共有サイトです。</p>
+                        
+                        @if(Auth::check())
+                                {!! link_to_route('users.show', 'Myページへ', ['user'=>Auth::user()->id], ['class' => 'btn btn-lg login_btn']) !!}
+                
+                        @elseif(! Auth::check())
+                                {!! link_to_route('login', 'ログイン', [], ['class' => 'btn btn-lg']) !!}
+        
+                        @endif
+                </div>
+        </div>
+    
 @endsection

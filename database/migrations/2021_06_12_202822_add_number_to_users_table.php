@@ -14,7 +14,7 @@ class AddNumberToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->char('number',5);
+            $table->unsignedMediumInteger('number');
         });
     }
 
@@ -26,7 +26,7 @@ class AddNumberToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('nember');
+            $table->dropColumn('number');
         });
     }
 }
