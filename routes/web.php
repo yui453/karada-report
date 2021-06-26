@@ -26,7 +26,7 @@ Route::group(['middleware'=>['admin_auth']], function() {
 });
 Route::group(['middleware'=>['auth']], function() {
     Route::get('password', 'Auth\ChangePasswordController@showChangePasswordForm')->name('password.form');
-    Route::post('password', 'Auth\ChangePasswordController@showChangePasswordForm')->name('password.change');
+    Route::post('password', 'Auth\ChangePasswordController@changePassword')->name('password.change');
     Route::resource('users', 'UserController', ['only'=>['show']]);
     Route::group(['prefix' => 'users/{user_id}'], function () {
         Route::resource('reports', 'ReportController', ['only'=>['show']]);

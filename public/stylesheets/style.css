@@ -33,6 +33,12 @@ h3{
     background-color: #caa846;
 }
 
+footer {
+    height: 25px;
+    color: #fff;
+    background-color: #797979;
+}
+
 /*welcomeページ*/
 #main_visual{
     height: 480px;

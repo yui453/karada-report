@@ -17,5 +17,9 @@
                         @endif
                 </div>
         </div>
+        
+        <footer class='text-center mt-4'>
+                <small>&copy; 2021 からだレポート</small>
+        </footer>
     
 @endsection

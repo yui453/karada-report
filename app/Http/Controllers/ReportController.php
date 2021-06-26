@@ -18,6 +18,7 @@ class ReportController extends Controller
     
     public function store(Request $request, $user_id) {
         $request->validate([
+            'date' =>'required',
             'first_condition' => ['required', 'string', 'max:255'],
             'first_content' => ['required', 'string', 'max:1000'],
             'second_condition' => ['nullable', 'string', 'max:255'],
@@ -58,6 +59,16 @@ class ReportController extends Controller
     }
     
     public function update(Request $request, $user_id, $report) {
+        $request->validate([
+            'date' =>'required',
+            'first_condition' => ['required', 'string', 'max:255'],
+            'first_content' => ['required', 'string', 'max:1000'],
+            'second_condition' => ['nullable', 'string', 'max:255'],
+            'second_content' => ['nullable', 'string', 'max:1000'],
+            'full_body' => ['required', 'string', 'max:1000'],
+            'selfcare' =>['required', 'string', 'max:1000']
+             ]);
+             
         $report = Report::findOrFail($report);
         
         $report->date = $request->date;

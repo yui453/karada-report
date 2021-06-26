@@ -1,0 +1,13 @@
+select * from users
+;
+insert into users(name, email, password, number, is_admin) values ("admin", "admin@admin.com", "12345678", 999999, 1);
+select * from users where name = "test";
+select * from users where name = 'test';
+¥q
+;
+quit;
+¥q
+;
+\q
+\d
+\s users
