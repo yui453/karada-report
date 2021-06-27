@@ -33,4 +33,9 @@ Route::group(['middleware'=>['auth']], function() {
         
     });
 });
+Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request'); // view は auth.passwords.email
+Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset'); // view は auth.passwords.reset
+Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
 
+Route::get('/home', 'HomeController@index')->name('home');

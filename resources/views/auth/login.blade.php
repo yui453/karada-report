@@ -21,6 +21,8 @@
 
                 {!! Form::submit('ログイン', ['class' => 'btn btn-block']) !!}
             {!! Form::close() !!}
+            
+            {!! link_to_route('password.request', 'パスワードをお忘れの方') !!}
 
         </div>
     </div>

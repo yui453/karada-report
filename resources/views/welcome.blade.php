@@ -18,7 +18,7 @@
                 </div>
         </div>
         
-        <footer class='text-center mt-4'>
+        <footer class="text-center mt-3">
                 <small>&copy; 2021 からだレポート</small>
         </footer>
     
