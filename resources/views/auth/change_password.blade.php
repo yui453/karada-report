@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+
+<div class="change_password_form">
     <div class="text-center">
         <h1>パスワード変更</h1>
     </div>
@@ -29,4 +31,5 @@
 
         </div>
     </div>
+</div>
 @endsection

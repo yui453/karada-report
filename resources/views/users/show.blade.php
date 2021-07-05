@@ -16,12 +16,14 @@
             <h2 class="card-title">
                 <span class="mr-2">No.{{$user->number}}</span>
                 <span>{{ $user->name }}様</span>
-            </h3>
+            </h2>
             @if(count($reports)>0)
-                <h5 class="card-text mr-5">
-                    <span class="mr-2">症状：{{$user->reports()->orderBy('date', 'desc')->first()->first_condition}}</span>
-                    <span class="mr-5">{{$user->reports()->orderBy('date', 'desc')->first()->second_condition}}</span>
-                    <span>最終来院日：{{$user->reports()->orderBy('date', 'desc')->first()->date}}</span>
+                <h5 class="card-text d-sm-flex flex-row">
+                    <p class="mr-5">
+                        <span class="mr-2">症状：{{$user->reports()->orderBy('date', 'desc')->first()->first_condition}}</span>
+                        <span>{{$user->reports()->orderBy('date', 'desc')->first()->second_condition}}</span>
+                    </p>
+                    <p>最終来院日：{{$user->reports()->orderBy('date', 'desc')->first()->date}}</p>
                 </h5>
             @endif
         </div>

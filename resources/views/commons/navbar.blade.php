@@ -1,14 +1,14 @@
 <header class="mb-4">
     
     @if(Auth::check() && Auth::user()->is_admin == '1')
-        <nav class="navbar navbar-expand-sm">
-            <a href="{{ route('users.index') }}" class="navbar-brand"><i class="far fa-clipboard fa-lg mr-2 ml-4""></i>からだレポート</a>
+        <nav class="navbar navbar-expand-md">
+            <a href="{{ route('users.index') }}" class="navbar-brand"><i class="far fa-clipboard fa-lg mr-2"></i>からだレポート</a>
     @elseif(Auth::check())
-        <nav class="navbar navbar-expand-sm">
-            <a href="{{ route('users.show', ['user'=>Auth::user()->id]) }}" class="navbar-brand"><i class="far fa-clipboard fa-lg mr-2 ml-4""></i>からだレポート</a>
+        <nav class="navbar navbar-expand-md">
+            <a href="{{ route('users.show', ['user'=>Auth::user()->id]) }}" class="navbar-brand"><i class="far fa-clipboard fa-lg mr-2"></i>からだレポート</a>
     @else
-        <nav class="navbar navbar-expand-sm">
-            <a class="navbar-brand" href="/"><i class="far fa-clipboard fa-lg mr-2 ml-4""></i>からだレポート</a>
+        <nav class="navbar navbar-expand-md">
+            <a class="navbar-brand" href="/"><i class="far fa-clipboard fa-lg mr-2"></i>からだレポート</a>
     @endif
         　
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-bar">
@@ -26,7 +26,7 @@
                     {{-- パスワード変更ページ --}}
                     <li class="nav-item mr-4">{!! link_to_route('password.form', 'パスワード変更', [], ['class'=>'nav-link']) !!}</li>
                     {{-- ログアウトリンク --}}
-                <li class="nav-item mr-4">{!! link_to_route('logout.get', 'ログアウト', [], ['class'=>'nav-link']) !!}</li>
+                    <li class="nav-item mr-4">{!! link_to_route('logout.get', 'ログアウト', [], ['class'=>'nav-link']) !!}</li>
                     
                 @elseif(Auth::check())
                     {{-- パスワード変更ページ --}}

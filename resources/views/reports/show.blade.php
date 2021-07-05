@@ -25,18 +25,20 @@
         </div>
         @endif
     </div>
+    <div class="report_contents">
+        <h5>症状：{{ $report->first_condition }}</h5>
+        <div class="border border-secondary rounded mb-2" style="padding:10px;">{{ $report->first_content }}</div>
+        @if(isset($report->second_content))
+            <h5>症状：{{ $report->second_condition }}</h5>
+            <div class="border border-secondary rounded mb-2" style="padding:10px;">{{ $report->second_content }}</div>
+        @endif
+        <h5>体全体の状態</h5>
+        <div class="border border-secondary rounded mb-2" style="padding:10px;">{{ $report->full_body }}</div>
+        <h5>セルフケアアドバイス</h5>
+        <div class="border border-secondary rounded mb-2" style="padding:10px;">{{ $report->selfcare }}</div>
     
-    <h5>症状：{{ $report->first_condition }}</h5>
-    <div class="border border-secondary rounded mb-2" style="padding:10px;">{{ $report->first_content }}</div>
-    @if(isset($report->second_content))
-        <h5>症状：{{ $report->second_condition }}</h5>
-        <div class="border border-secondary rounded mb-2" style="padding:10px;">{{ $report->second_content }}</div>
-    @endif
-    <h5>体全体の状態</h5>
-    <div class="border border-secondary rounded mb-2" style="padding:10px;">{{ $report->full_body }}</div>
-    <h5>セルフケアアドバイス</h5>
-    <div class="border border-secondary rounded mb-2" style="padding:10px;">{{ $report->selfcare }}</div>
-    
-    {!! link_to_route('users.show', 'からだレポート一覧へ戻る', ['user'=>$report->user_id], ['class' => 'btn mb-2']) !!}
+        {!! link_to_route('users.show', 'からだレポート一覧へ戻る', ['user'=>$report->user_id], ['class' => 'btn mb-2']) !!}
+    </div>
+
 @endsection('content')
 

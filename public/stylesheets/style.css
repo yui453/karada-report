@@ -3,13 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
 
 header {
-    width: 1000px;
     margin: 0 auto;
 }
 
-.container {
-    width: 1000px;
-}
 
 body {
     color: #3a3a3a;
@@ -20,6 +16,12 @@ h3{
     margin-bottom: 5px;
     border-left: 10px solid #caa846;
     padding-left: 10px;
+}
+
+@media (max-width: 575px) {
+    h3{
+        font-size: 20px;
+    }
 }
 
 .btn{
@@ -38,9 +40,28 @@ footer {
 }
 
 /*welcomeページ*/
+
+.main_visual_pc{
+    width:100%;
+    max-width: 100%;
+    height: auto;
+}
+.main_visual_sp{
+    display: none;
+}
+
+@media (max-width: 575px) {
+    .main_visual_pc{
+        display: none;
+    }
+    .main_visual_sp{
+        display: block;
+        width:100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
 #main_visual{
-    height: 480px;
-    background-image: url(/images/top.jpg);
     position: relative;
 }
 
@@ -48,47 +69,89 @@ footer {
     color: rgba(255, 255, 255, 0.8);
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
-    margin-top: 80px;
-    margin-left: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  　-webkit- transform: translateY(-50%) translateX(-50%);
+    width: 80%;
     padding: 30px 80px;
 }
 
+
 #main_visual h1{
-    font-size: 70px;
+    font-size: 5vw;
 }
 
 .lead {
-    font-size: 20px;
+    font-size: 2vw;
 }
+
+@media (max-width: 575px) {
+    .main_visual_title {
+        width: 100%;
+        padding: 10px 10px;
+    }
+    .sub_title{
+        font-size: 10px;
+    }
+    #main_visual h1{
+        font-size: 23px;
+    }
+    .lead {
+        font-size: 12px;
+    }
+}
+
 
 /*navbarページ*/
 .navbar{
     height: 80px;
+    
     border-top: 8px solid #caa846;
     border-bottom: 2px solid #797979;
 }
 
 .navbar-brand{
-    
-    font-size: 30px;
+    margin-left: 30px;
+    font-size: 3vw;
     font-weight: 600;
     color: #5c5c5c;
 }
 
 .navbar-brand:hover{
     color: #5c5c5c;
-    
 }
 
-.nav-link{
+@media (max-width: 575px) {
+    .navbar-brand{
+        font-size: 20px;
+        margin-left: 0;
+    }
+}
+
+#nav-bar{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#nav-bar a{
     color: #3a3a3a;
-    font-weight: 400;
+    font-weight: bold;
 }
 
 .nav-link:hover{
     color: #3a3a3a;
     border-bottom: 2px solid #caa846
 }
+
+.navbar-toggler{
+    padding: 5px;
+    border: 1px solid #999999;
+}
+
+.navbar-toggler-icon{
+    background-image: url("/images/navbar-toggler-icon.png");
+}
+
 
 /*users.indexページ*/
 .table th{
@@ -111,6 +174,15 @@ footer {
     background-color: #e6e6e6;
 }
 
+@media (max-width: 575px) {
+    .card-body h2{
+        font-size: 20px;
+    }
+    .card-body h5{
+        font-size: 15px;
+    }
+}
+
 .report-list-item{
     /*display: block;
     height: 100%;
@@ -122,4 +194,34 @@ footer {
 .report-list-item:hover{
     color: #3a3a3a;
     /*background-color: #e6e6e6;*/
+}
+
+/*reports.showページ*/
+.report_contents h5{
+    font-size: 15px;
+}
+
+.border{
+    font-size: 13px;
+}
+
+/*change_passwordページ*/
+
+@media (max-width: 575px) {
+    .change_password_form h1{
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+}
+
+
+/*loginページ*/
+
+@media (max-width: 575px) {
+    .login_form h1{
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
 }

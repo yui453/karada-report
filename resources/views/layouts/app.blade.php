@@ -13,16 +13,16 @@
   
   <body>
     
-    {{-- ナビゲーションバー --}}
-    @include('commons.navbar')
+      {{-- ナビゲーションバー --}}
+      @include('commons.navbar')
     
-    <div class = "container">
+      <div class = "container-fluid">
         {{-- エラーメッセージ --}}
         @include('commons.error_messages')
         
         @yield('content')
         
-    </div>
+      </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
